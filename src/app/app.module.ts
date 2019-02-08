@@ -1,0 +1,30 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+
+import App from './App';
+import Home from '../pages/home/Home';
+
+@NgModule({
+  declarations: [
+    App,
+    Home
+  ],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(App)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    App,
+    Home
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  ]
+})
+export class AppModule {}

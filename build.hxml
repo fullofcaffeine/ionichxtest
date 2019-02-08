@@ -1,0 +1,8 @@
+-cp hxgenjs
+-cp haxe_src
+-lib tink_macro
+-main EntryPoint
+-js src/app/main.js
+#--macro "include('app.routes')"
+-D js_es=6
+--macro genjs.Generator.use()
